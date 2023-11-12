@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청첩장</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #map {
+            height: 300px;
+            width: 100%;
+        }
+
+        #congratulations {
+            margin-top: 20px;
+        }
+
+        #congratulations input,
+        #congratulations textarea,
+        #congratulations button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#intro">소개</a>
+        <a href="#gallery">갤러리</a>
+        <a href="#directions">오시는 길</a>
+        <a href="#accounts">계좌번호</a>
+        <a href="#congratulations">축하글 작성</a>
+    </nav>
+</header>
+
+<section id="intro">
+    <h2>소개</h2>
+    <!-- 이미지의 최대 너비를 100%로 설정 -->
+    <img src="소개글1.png" alt="소개 이미지" style="max-width: 100%;">
+    <!-- 소개 내용을 여기에 추가 -->
+    <img src="소개글2.png" alt="소개 이미지" style="max-width: 100%;">
+    <!-- 소개 내용을 여기에 추가 -->
+    <img src="소개글3.png" alt="소개 이미지" style="max-width: 100%;">
+    <!-- 소개 내용을 여기에 추가 -->
+</section>
+
+<section id="gallery">
+    <h2>갤러리</h2>
+    <div class="gallery">
+        <!-- 갤러리 이미지를 여기에 추가 -->
+    </div>
+</section>
+
+<section id="directions">
+    <h2>오시는 길</h2>
+    <!-- 이미지의 최대 너비를 100%로 설정 -->
+    <img src="오시는 길.png" alt="오시는 길" style="max-width: 100%;">
+    <!-- 소개 내용을 여기에 추가 -->
+</section>
+
+<section id="accounts">
+    <h2>계좌번호</h2>
+    <p>신부측 계좌번호: <span id="brideAccount">123-456-789</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
+    <p>신랑측 계좌번호: <span id="groomAccount">987-654-321</span> <button onclick="copyToClipboard('groomAccount')">복사</button></p>
+</section>
+
+<section id="congratulations">
+    <h2>축하글 작성</h2>
+    <input type="text" id="name" placeholder="이름">
+    <textarea id="message" placeholder="축하 메시지"></textarea>
+    <button onclick="addCongratulations()">작성</button>
+    <div id="congratulationsList"></div>
+</section>
+
+<script>
+    // Google Maps API를 사용하여 지도를 표시할 수도 있습니다.
+
+    // 복사 버튼 클릭 시 클립보드에 복사하는 함수
+    function copyToClipboard(elementId) {
+        var copyText = document.getElementById(elementId);
+        var textArea = document.createElement("textarea");
+        textArea.value = copyText.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("Copy");
+        document.body.removeChild(textArea);
+        alert("계좌번호가 복사되었습니다.");
+    }
+
+    // 축하글 작성 및 표시하는 함수
+    function addCongratulations() {
+        var name = document.getElementById("name").value;
+        var message = document.getElementById("message").value;
+
+        if (name && message) {
+            var congratulationsList = document.getElementById("congratulationsList");
+            var newCongratulations = document.createElement("div");
+            newCongratulations.innerHTML = "<strong>" + name + ":</strong> " + message;
+            congratulationsList.appendChild(newCongratulations);
+
+            // 추가한 후 입력 필드 초기화
+            document.getElementById("name").value = "";
+            document.getElementById("message").value = "";
+        } else {
+            alert("이름과 메시지를 모두 입력하세요.");
+        }
+    }
+</script>
+
+</body>
+</html>
