@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #f5ecce;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -34,7 +34,8 @@
             margin-top: 60px;
         }
 
-        section h2 {
+        section h1 {
+            font-size: 40px;
             text-align: center;
         }
 
@@ -52,8 +53,9 @@
         }
 
         #accounts p {
-            font-size: 18px;
+            font-size: 30px;
             text-align: center;
+            margin-bottom: 10px; /* 추가된 부분 */
         }
 
         #congratulations {
@@ -88,7 +90,7 @@
 </header>
 
 <section id="invite">
-    <h2>초대합니다</h2>
+    <h1>초대합니다</h1>
     <div class="image-container">
         <img src="소개글2.png" alt="초대합니다 이미지">
         <img src="소개글1.png" alt="초대합니다 이미지">
@@ -97,56 +99,36 @@
 </section>
 
 <section id="directions">
-    <h2>오시는 길</h2>
+    <h1>오시는 길</h1>
     <div class="image-container">
         <img src="오시는 길.png" alt="초대합니다 이미지">
-    <img src="오시는 길2.png" alt="초대합니다 이미지">
+        <img src="오시는 길2.png" alt="초대합니다 이미지">
     </div>
     <!-- 지도 API를 사용하여 오시는 길을 표시할 수도 있습니다. -->
 </section>
 
 <section id="accounts">
-    <h2>계좌번호</h2>
-        <p>정재화 <span id="brideAccount">110-048-431-494(신한은행)</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
-        <p> 유정희 <span id="brideAccount">626402-01-009525(국민은행)</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
-        <p>정연범 <span id="brideAccount">626402-01-640148(국민은행)</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
+    <h1>계좌번호</h1>
+        <p>정재화</p> 
+        <p><span id="brideAccount">110-048-431-494(신한)</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
+        <p>유정희</p> 
+        <p><span id="brideAccount">626402-01-009525(국민)</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
+        <p>정연범</p>
+        <p><span id="brideAccount">626402-01-640148(국민)</span> <button onclick="copyToClipboard('brideAccount')">복사</button></p>
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 <script>
-    var currentImageIndex = 0;
-    var galleryImages = document.querySelectorAll('.gallery img');
-
     function copyToClipboard(elementId) {
         var copyText = document.getElementById(elementId);
         var textArea = document.createElement("textarea");
-        textArea.value = copyText.textContent;
+        textArea.value = copyText.textContent.trim();
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand("Copy");
         document.body.removeChild(textArea);
         alert("계좌번호가 복사되었습니다.");
     }
-
-    function addCongratulations() {
-        var name = document.getElementById("name").value;
-        var message = document.getElementById("message").value;
-
-        if (name && message) {
-            var congratulationsList = document.getElementById("congratulationsList");
-            var newCongratulations = document.createElement("div");
-            newCongratulations.innerHTML = "<strong>" + name + ":</strong> " + message;
-            congratulationsList.appendChild(newCongratulations);
-
-            document.getElementById("name").value = "";
-            document.getElementById("message").value = "";
-        } else {
-            alert("이름과 메시지를 모두 입력하세요.");
-        }
-    }
-
-    // 오시는 길에서 사용할 지도 API 코드를 추가할 수 있습니다.
-
 </script>
 
 </body>
