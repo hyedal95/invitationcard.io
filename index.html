@@ -35,8 +35,9 @@
         }
 
         section h1 {
-            font-size: 20px;
+            font-size: 30px;
             text-align: center;
+            color: black;
         }
 
         .image-container {
@@ -77,6 +78,17 @@
             font-size: 24px;
             color: #333;
         }
+
+        .footer {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        
+        }
+
+        
     </style>
 </head>
 <body>
@@ -90,6 +102,7 @@
 </header>
 
 <section id="invite">
+    <h1></h1>
     <div class="image-container">
         <img src="소개글2.png" alt="초대합니다 이미지">
         <img src="소개글1.png" alt="초대합니다 이미지">
@@ -108,13 +121,16 @@
 
 <section id="accounts">
     <h1>마음 전하는 곳</h1>
+    <div class="footer">
         <p>정재화</p> 
         <p><span id="brideAccount1">110-048-431-494(신한)</span> <button onclick="copyToClipboard('brideAccount1')">복사</button></p>
         <p>유정희</p> 
         <p><span id="brideAccount2">626402-01-009525(국민)</span> <button onclick="copyToClipboard('brideAccount2')">복사</button></p>
         <p>정연범</p>
         <p><span id="brideAccount3">626402-01-640148(국민)</span> <button onclick="copyToClipboard('brideAccount3')">복사</button></p>
-</section>
+    </div>
+
+    </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 <script>
@@ -132,5 +148,6 @@
 
 </body>
 </html>
+
 
 
