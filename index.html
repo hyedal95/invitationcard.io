@@ -3,188 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="[연범♡혜림 결혼합니다] 모바일 청첩장">
+    <meta property="og:description" content="바쁘신 가운데 두 사람의 장래를 ...(중략)">
     <title>연범 &#9829;혜림 청첩장</title>
-    <style>
-
-        *{
-            margin: 0; padding: 0;
-        }
-        .header{
-            position: relative;
-            width: 600px; 
-            height: 50px;
-            background-color: rgb(210, 231, 224);
-        }
-        .nav{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
-        }
-        .nav a{
-            text-decoration:none;
-            border: 1px solid rgb(114, 134, 0);
-            color: black;
-        }
-
-
-       #gall{
-            color: rgb(0, 0, 0);
-            text-align: center;
-            width: 600px; 
-            height: 900px;
-       
-        }
-      #inv{
-            color: rgb(0, 0, 0);
-            text-align: center;
-            width: 600px; 
-            height: 1460px;
-      
-      }
-            #inv img{
-                object-fit: cover;
-        }
-        #goto{
-            color: rgb(0, 0, 0);
-            overflow: hidden;
-            text-align: center;
-            width: 600px; 
-            height: 1450px;
-         
-        }
-        #heart{
-            color: rgb(0, 0, 0);
-            text-align: center;
-            width: 600px; 
-            height: 300px;
-        
-        }
-
-        #heart p{
-            font-weight: bold; 
-            font-size: 25px;
-        }
-
-        #mini{
-            width: 600px;
-            margin: 0 auto;
-            overflow: hidden;
-            padding-top: 10px;
-
-        }
-
-        img{
-            display: block;
-            width: 600px;
-            height: 700px;
-            object-fit: cover;
-            
-        }
-        .gall-container {
-            display: flex;
-            overflow: hidden;
-            transition: transform 0.5s ease-in-out;
-            position: relative;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .gall-container img {
-            width: 100%;
-            max-width: 100%; /* Adjusted for better mobile responsiveness */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            margin-right: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .thumbnail-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            flex-wrap: wrap; /* Allow thumbnails to wrap on smaller screens */
-        }
-
-        .thumbnail-container img:hover{
-            border-color:tomato;
-        }
-
-        .thumbnail {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            margin-right: 5px;
-            cursor: pointer;
-            transition: opacity 0.3s ease-in-out;
-        }
-        #mainimg{
-            border:1px solid #ccc;
-            padding:5px;
-            margin-bottom:3px;
-    
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio src="Brian Crain  Butterfly Waltz Overhead Camera.mp3" autoplay></audio>
     <div class="header">
         <div class="nav">
-            <a href="#gall">갤러리</a>
-            <a href="#inv">초대장</a>
-            <a href="#goto">오시는 길</a>
-            <a href="#heart">마음 전하는 곳</a>
+            <ul>
+                <li><a href="#main">연범 &#9829;혜림</a></li>
+                <li><a href="#slide">갤러리</a></li>
+                <li><a href="#text">초대의 글</a></li>
+                <li><a href="#map">오시는 길</a></li>
+                <li><a href="#heart">마음 전하는 곳</a></li>
+            </ul>
         </div>
     </div>
-    <div class="wrap">
 
-    <div id="gall">
+    <div id="main">
+        <h1>연범 &#9829;혜림 </h1>
+        <img src="소개글2.png" alt="메인 이미지">
+    </div>
+
+    <div id="slide">
         <h1>갤러리</h1>
-        <div id="mini">
-            <div class="gall-container">
-                <div id="mainimg"><img src="소개글2.png" alt="메인 이미지"></div>
-            </div>
-            <div class="thumbnail-container">
-                <a href="소개글2.png" title="소개글"><img class="thumbnail active" src="소개글2.png" alt="초대" ></a>
-                <a href="gall01.jpg" title="gall01"><img class="thumbnail" src="gall01.jpg" alt="썸네일" ></a> 
-                <a href="gall02.jpg" title="gall02"><img class="thumbnail" src="gall02.jpg" alt="썸네일" ></a>
-                <a href="gall03.jpg" title="gall03"><img class="thumbnail" src="gall03.jpg" alt="썸네일" ></a>
-                <a href="gall04.jpg" title="gall04"><img class="thumbnail" src="gall04.jpg" alt="썸네일" ></a>
+        <div class="section">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <input type="radio" name="slide" id="slide04">
+    
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <li>
+                        <a>
+                            <label for="slide03" class="left"></label>
+                            <img src="gall01.png">
+                            <label for="slide02" class="right"></label>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <label for="slide01" class="left"></label>
+                            <img src="gall02.png">
+                            <label for="slide03" class="right"></label>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <label for="slide02" class="left"></label>
+                            <img src="gall03.png">
+                            <label for="slide04" class="right"></label>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <label for="slide03" class="left"></label>
+                            <img src="gall04.png">
+                            <label for="slide01" class="right"></label>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        
     </div>
-    <div id="inv">
-        <hr style="border: dotted 5px rgb(78, 78, 78);">
-        <h1>초대장</h1>
+
+    <div id="text">
+        <h1>초대의 글</h1>
         <img src="소개글1.png">
         <img src="소개글3.png">
     </div>
-    <div id="goto">
-        <hr style="border: dotted 5px rgb(78, 78, 78);">
-        <h1>오시는 길 </h1>
+
+    <div id="map">
+        <h1>오시는 길</h1>
         <img src="오시는 길.png">
         <img src="오시는 길2.png">
-
-
-    </div>    
-    <div id="heart">
-        <hr style="border: dotted 5px rgb(78, 78, 78);">
-        <h1>마음 전하는 곳</h1>
-        <p>정재화</p> 
-        <p><span id="brideAccount1">110-048-431-494(신한)</span> <button onclick="copyToClipboard('brideAccount1')">복사</button></p>
-        <p>유정희</p> 
-        <p><span id="brideAccount2">626402-01-009525(국민)</span> <button onclick="copyToClipboard('brideAccount2')">복사</button></p>
-        <p>정연범</p>
-        <p><span id="brideAccount3">626402-01-640148(국민)</span> <button onclick="copyToClipboard('brideAccount3')">복사</button></p>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-<script>
+
+    <div id="heart">
+        <h1>마음 전하는 곳</h1>
+        <div class="footer">
+            <p>정재화</p> 
+            <p><span id="brideAccount1">110-048-431-494(신한)</span> <button onclick="copyToClipboard('brideAccount1')">복사</button></p>
+            <p>유정희</p> 
+            <p><span id="brideAccount2">626402-01-009525(국민)</span> <button onclick="copyToClipboard('brideAccount2')">복사</button></p>
+            <p>정연범</p>
+            <p><span id="brideAccount3">626402-01-640148(국민)</span> <button onclick="copyToClipboard('brideAccount3')">복사</button></p>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
         const thumbnails = document.querySelectorAll('.thumbnail');
         thumbnails.forEach((thumbnail, index) => {
@@ -204,17 +117,6 @@
         document.body.removeChild(textArea);
         alert("계좌번호가 복사되었습니다.");
     }
-
-    $(function(){
-    $(".thumbnail-container a").click(function(){            //클릭 시
-        var imgPath = $(this).attr("href");     //클릭한 a태그의 하이퍼링크를 변수저장
-        $("#mainimg>img").attr({src:imgPath})   //메인 이미지의 주소 속성에 할당
-        .hide()                               //fadein()효과를 보여주기 위해 숨김처리
-        .fadeIn();                              //fadeIn()
-        return false;                           //<a> 의 본래기능 (하이퍼링크) 작동방지
-    });
-});
-
-</script>
+    </script>
 </body>
 </html>
